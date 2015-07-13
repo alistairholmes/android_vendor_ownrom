@@ -147,7 +147,6 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     CMHome \
-    KernelAdiutor \
     OwnWallpapers \
     OwnOTA 
 
@@ -248,7 +247,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Copy Prebuilt apps:  
 PRODUCT_COPY_FILES += \
-    vendor/ownrom/prebuilt/common/RomStats.apk:system/app/RomStats/RomStats.apk
+    vendor/ownrom/prebuilt/common/RomStats.apk:system/app/RomStats/RomStats.apk \
+    vendor/ownrom/prebuilt/common/KernelAdiutor.apk:system/app/KernelAdiutor/KernelAdiutor.apk
 
 OWNROM_DISPLAY_VERSION := $(OWNROM_VERSION)
 
