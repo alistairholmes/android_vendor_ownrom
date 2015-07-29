@@ -1,0 +1,14 @@
+android
+bionic
+build
+development
+frameworks/av
+frameworks/base
+frameworks/native
+frameworks/opt/cards
+frameworks/webview
+packages/apps/Bluetooth
+packages/apps/OwnOTA
+packages/apps/OwnWallpapers
+packages/apps/Settings
+vendor/ownrom

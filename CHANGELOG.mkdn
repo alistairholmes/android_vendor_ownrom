@@ -1,0 +1,7 @@
+OwnROM
+===============
+
+Visit http://github.com/OwnROM for full source and git access.
+
+CHANGELOG (notable new features)
+---------
