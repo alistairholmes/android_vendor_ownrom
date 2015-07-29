@@ -147,7 +147,6 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     CMHome \
-    KernelAdiutor \
     OwnWallpapers \
     OwnOTA 
 
@@ -203,10 +202,13 @@ PRODUCT_PACKAGES += \
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
-    libstagefright_soft_ffmpegadec \
-    libstagefright_soft_ffmpegvdec \
-    libFFmpegExtractor \
+    libffmpeg_extractor \
+    libffmpeg_omx \
     media_codecs_ffmpeg.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.sf.omx-plugin=libffmpeg_omx.so \
+    media.sf.extractor-plugin=libffmpeg_extractor.so
 
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
@@ -222,9 +224,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGE_OVERLAYS += vendor/ownrom/overlay/common
 
 # version
-OWNROM_VERSION_MAIN = BETA
-OWNROM_VERSION_MAJOR = 0
-OWNROM_VERSION_MINOR = 6
+OWNROM_VERSION_MAIN =
+OWNROM_VERSION_MAJOR = 1
+OWNROM_VERSION_MINOR = 0
 
 # release
 ifeq ($(OWNROM_RELEASE),true)
@@ -232,7 +234,7 @@ ifeq ($(OWNROM_RELEASE),true)
 else
     OWNROM_VERSION_STATE := UNOFFICIAL
 endif
-    OWNROM_VERSION := OwnROM-$(OWNROM_BUILD)-$(OWNROM_VERSION_MAIN)-$(OWNROM_VERSION_MAJOR).$(OWNROM_VERSION_MINOR)-$(OWNROM_VERSION_STATE)-$(shell date +%Y%m%d)
+    OWNROM_VERSION := OwnROM-$(OWNROM_BUILD)-$(OWNROM_VERSION_MAJOR).$(OWNROM_VERSION_MINOR)-$(OWNROM_VERSION_STATE)-$(shell date +%Y%m%d)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ownrom.version=$(OWNROM_VERSION) \
@@ -240,12 +242,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     own.ota.version=$(shell date +%Y%m%d) \
     ro.romstats.url=http://owndroid.nl/Stats \
     ro.romstats.name=OwnROM \
-    ro.romstats.version=$(OWNROM_VERSION_STATE)-$(OWNROM_VERSION_MAIN)-$(OWNROM_VERSION_MAJOR).$(OWNROM_VERSION_MINOR) \
+    ro.romstats.version=$(OWNROM_VERSION_STATE)-$(OWNROM_VERSION_MAJOR).$(OWNROM_VERSION_MINOR) \
     ro.romstats.tframe=7 
 
 # Copy Prebuilt apps:  
 PRODUCT_COPY_FILES += \
-    vendor/ownrom/prebuilt/common/RomStats.apk:system/app/RomStats/RomStats.apk
+    vendor/ownrom/prebuilt/common/RomStats.apk:system/app/RomStats/RomStats.apk \
+    vendor/ownrom/prebuilt/common/KernelAdiutor.apk:system/app/KernelAdiutor/KernelAdiutor.apk
 
 OWNROM_DISPLAY_VERSION := $(OWNROM_VERSION)
 
