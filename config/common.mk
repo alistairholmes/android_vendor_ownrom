@@ -144,7 +144,7 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     AudioFX \
     CMFileManager \
-    Eleven \
+    Apollo \
     LockClock \
     CMHome \
     OwnWallpapers \
