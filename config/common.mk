@@ -214,6 +214,7 @@ OWN_VERSION := 3.0
 OWNROM_VERSION := OwnROM-v$(OWN_VERSION)-$(OWNROM_BUILD)-$(shell date +%Y%m%d)-$(OWNROM_BUILDTYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
+  ro.own.version=$(OWN_VERSION) \
   ro.ownrom.version=$(OWNROM_VERSION) \
   ro.ownrom.releasetype=$(OWNROM_BUILDTYPE) \
   ro.modversion=$(OWNROM_VERSION) 
