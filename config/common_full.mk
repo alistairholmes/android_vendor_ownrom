@@ -1,8 +1,8 @@
 # Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+$(call inherit-product, vendor/ownrom/config/common.mk)
 
 # Include CM audio files
-include vendor/cm/config/cm_audio.mk
+include vendor/ownrom/config/cm_audio.mk
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
