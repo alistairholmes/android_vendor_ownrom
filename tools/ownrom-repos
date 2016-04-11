@@ -1,0 +1,8 @@
+android
+build
+device/qcom/sepolicy
+external/sepolicy
+frameworks/base
+packages/apps/Settings
+vendor/cmsdk
+vendor/ownrom
