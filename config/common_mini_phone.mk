@@ -1,10 +1,10 @@
-# Inherit common CM stuff
+# Inherit common OwnROM stuff
 $(call inherit-product, vendor/ownrom/config/common.mk)
 
-# Include CM audio files
-include vendor/ownrom/config/cm_audio.mk
+# Include OwnROM audio files
+include vendor/ownrom/config/ownrom_audio.mk
 
-# Required CM packages
+# Required OwnROM packages
 PRODUCT_PACKAGES += \
     LatinIME
 
@@ -12,10 +12,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Helium.ogg
-
-ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
-    PRODUCT_COPY_FILES += \
-        vendor/ownrom/prebuilt/common/bootanimation/320.zip:system/media/bootanimation.zip
-endif
 
 $(call inherit-product, vendor/ownrom/config/telephony.mk)

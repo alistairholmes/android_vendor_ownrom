@@ -1,10 +1,10 @@
-# Inherit common CM stuff
+# Inherit common OwnROM stuff
 $(call inherit-product, vendor/ownrom/config/common.mk)
 
-# Include CM audio files
-include vendor/ownrom/config/cm_audio.mk
+# Include OwnROM audio files
+include vendor/ownrom/config/ownrom_audio.mk
 
-# Optional CM packages
+# Optional OwnROM packages
 PRODUCT_PACKAGES += \
     Galaxy4 \
     HoloSpiralWallpaper \
@@ -18,7 +18,7 @@ PRODUCT_PACKAGES += \
     PhotoPhase \
     Screencast
 
-# Extra tools in CM
+# Extra tools in OwnROM
 PRODUCT_PACKAGES += \
     7z \
     lib7z \

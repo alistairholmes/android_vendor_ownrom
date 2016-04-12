@@ -1,37 +1,6 @@
 PRODUCT_BRAND ?= OwnROM
 
-ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
-# determine the smaller dimension
-TARGET_BOOTANIMATION_SIZE := $(shell \
-  if [ $(TARGET_SCREEN_WIDTH) -lt $(TARGET_SCREEN_HEIGHT) ]; then \
-    echo $(TARGET_SCREEN_WIDTH); \
-  else \
-    echo $(TARGET_SCREEN_HEIGHT); \
-  fi )
-
-# get a sorted list of the sizes
-bootanimation_sizes := $(subst .zip,, $(shell ls vendor/ownrom/prebuilt/common/bootanimation))
-bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_sizes)) | sort -rn)
-
-# find the appropriate size and set
-define check_and_set_bootanimation
-$(eval TARGET_BOOTANIMATION_NAME := $(shell \
-  if [ -z "$(TARGET_BOOTANIMATION_NAME)" ]; then
-    if [ $(1) -le $(TARGET_BOOTANIMATION_SIZE) ]; then \
-      echo $(1); \
-      exit 0; \
-    fi;
-  fi;
-  echo $(TARGET_BOOTANIMATION_NAME); ))
-endef
-$(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size)))
-
-ifeq ($(TARGET_BOOTANIMATION_HALF_RES),true)
-PRODUCT_BOOTANIMATION := vendor/ownrom/prebuilt/common/bootanimation/halfres/$(TARGET_BOOTANIMATION_NAME).zip
-else
-PRODUCT_BOOTANIMATION := vendor/ownrom/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip
-endif
-endif
+PRODUCT_BOOTANIMATION := vendor/ownrom/prebuilt/common/bootanimation/bootanimation.zip
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -115,13 +84,13 @@ include vendor/ownrom/config/themes_common.mk
 # CyanogenMod SDK
 include vendor/ownrom/config/cmsdk_common.mk
 
-# Required CM packages
+# Required OwnROM packages
 PRODUCT_PACKAGES += \
     Development \
     BluetoothExt \
     Profiles
 
-# Optional CM packages
+# Optional OwnROM packages
 PRODUCT_PACKAGES += \
     libemoji \
     Terminal
@@ -130,9 +99,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librsjni
 
-# Custom CM packages
+# Custom OwnROM packages
 PRODUCT_PACKAGES += \
-    Launcher3 \
     Trebuchet \
     AudioFX \
     Eleven \
@@ -146,7 +114,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Exchange2
 
-# Extra tools in CM
+# Extra tools in OwnROM
 PRODUCT_PACKAGES += \
     libsepol \
     mke2fs \
@@ -210,7 +178,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_PACKAGE_OVERLAYS += vendor/ownrom/overlay/common
 
 OWNROM_BUILDTYPE ?= UNOFFICIAL
-OWN_VERSION := 3.0
+OWN_VERSION := BETA_3.0
 OWNROM_VERSION := OwnROM-$(OWNROM_BUILDTYPE)-v$(OWN_VERSION)-$(OWNROM_BUILD)-$(shell date +%Y%m%d)
 
 PRODUCT_PROPERTY_OVERRIDES += \

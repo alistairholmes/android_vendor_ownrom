@@ -1,4 +1,4 @@
-# CyanogenMod Extras
+# OwnROM Extras
 import /init.superuser.rc
 
 on init
