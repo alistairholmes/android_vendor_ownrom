@@ -106,6 +106,7 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     CMSettingsProvider \
+    CMFileManager \
     ExactCalculator \
     LiveLockScreenService \
     WeatherProvider
@@ -178,8 +179,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_PACKAGE_OVERLAYS += vendor/ownrom/overlay/common
 
 OWNROM_BUILDTYPE ?= UNOFFICIAL
-OWN_VERSION := BETA_3.0
-OWNROM_VERSION := OwnROM-$(OWNROM_BUILDTYPE)-v$(OWN_VERSION)-$(OWNROM_BUILD)-$(shell date +%Y%m%d)
+OWN_VERSION := BETA_v3.0
+OWNROM_VERSION := OwnROM-$(OWNROM_BUILDTYPE)-$(OWN_VERSION)-$(OWNROM_BUILD)-$(shell date +%Y%m%d)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.own.version=$(OWN_VERSION) \
