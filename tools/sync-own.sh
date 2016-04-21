@@ -33,7 +33,7 @@ echo -e ""
 done
 $normal
 else
-echo -e "Please make sure you are running this in the root of OwnROM Source!
+echo -e "Please make sure you are running this in the root of OwnROM Source!"
 exit 1;
 fi
 
