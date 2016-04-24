@@ -34,10 +34,11 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
-# KernelAdiutor
+# OwnROM Custom Packages
 PRODUCT_COPY_FILES += \
-    vendor/ownrom/prebuilt/KernelAdiutor/KernelAdiutor.apk:system/priv-app/KernelAdiutor/KernelAdiutor.apk
-
+    vendor/ownrom/prebuilt/prebuilt-apps/KernelAdiutor/KernelAdiutor.apk:system/priv-app/KernelAdiutor/KernelAdiutor.apk \
+    vendor/ownrom/prebuilt/prebuilt-apps/ESFileExplorer/ESFileExplorer.apk:system/priv-app/ESFileExplorer/ESFileExplorer.apk
+	 
 # Backup Tool
 ifneq ($(WITH_GMS),true)
 PRODUCT_COPY_FILES += \
