@@ -110,7 +110,6 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     CMSettingsProvider \
-    CMFileManager \
     ExactCalculator \
     LiveLockScreenService \
     WeatherProvider
