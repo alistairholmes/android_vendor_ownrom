@@ -34,6 +34,10 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
+# KernelAdiutor
+PRODUCT_COPY_FILES += \
+    vendor/ownrom/prebuilt/KernelAdiutor/KernelAdiutor.apk:system/priv-app/KernelAdiutor/KernelAdiutor.apk
+
 # Backup Tool
 ifneq ($(WITH_GMS),true)
 PRODUCT_COPY_FILES += \
