@@ -37,7 +37,9 @@ endif
 # OwnROM Custom Packages
 PRODUCT_COPY_FILES += \
     vendor/ownrom/prebuilt/prebuilt-apps/KernelAdiutor/KernelAdiutor.apk:system/priv-app/KernelAdiutor/KernelAdiutor.apk \
-    vendor/ownrom/prebuilt/prebuilt-apps/ESFileExplorer/ESFileExplorer.apk:system/priv-app/ESFileExplorer/ESFileExplorer.apk
+    vendor/ownrom/prebuilt/prebuilt-apps/ESFileExplorer/ESFileExplorer.apk:system/priv-app/ESFileExplorer/ESFileExplorer.apk \
+    vendor/ownrom/prebuilt/prebuilt-apps/NovaLauncher/NovaLauncher.apk:system/priv-app/NovaLauncher/NovaLauncher.apk \
+    vendor/ownrom/prebuilt/prebuilt-apps/GoogleChrome/GoogleChrome.apk:system/priv-app/GoogleChrome/GoogleChrome.apk
 	 
 # Backup Tool
 ifneq ($(WITH_GMS),true)
@@ -106,7 +108,6 @@ PRODUCT_PACKAGES += \
 
 # Custom OwnROM packages
 PRODUCT_PACKAGES += \
-    Trebuchet \
     AudioFX \
     Eleven \
     LockClock \
