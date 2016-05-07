@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Exports
+
+. $ANDROID_BUILD_TOP/vendor/ownrom/tools/colors
+
 export Changelog=Changelog.txt
 
 if [ -f $Changelog ];
@@ -31,4 +35,5 @@ done
 sed -i 's/project/   */g' $Changelog
 
 cp $Changelog $OUT/system/etc/
+cp $Changelog $OUT/
 rm $Changelog
