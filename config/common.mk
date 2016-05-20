@@ -115,6 +115,7 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LiveLockScreenService \
     WeatherProvider \
+    OmniSwitch \
     DataUsageProvider
 
 # Extra tools in OwnROM
