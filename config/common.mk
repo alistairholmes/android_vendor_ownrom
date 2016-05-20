@@ -39,7 +39,6 @@ PRODUCT_COPY_FILES += \
     vendor/ownrom/prebuilt/prebuilt-apps/KernelAdiutor/KernelAdiutor.apk:system/priv-app/KernelAdiutor/KernelAdiutor.apk \
     vendor/ownrom/prebuilt/prebuilt-apps/ESFileExplorer/ESFileExplorer.apk:system/priv-app/ESFileExplorer/ESFileExplorer.apk \
     vendor/ownrom/prebuilt/prebuilt-apps/NovaLauncher/NovaLauncher.apk:system/priv-app/NovaLauncher/NovaLauncher.apk \
-    vendor/ownrom/prebuilt/prebuilt-apps/GoogleChrome/GoogleChrome.apk:system/app/GoogleChrome/GoogleChrome.apk \
     vendor/ownrom/prebuilt/prebuilt-apps/GoogleMail/GoogleMail.apk:system/app/GoogleMail/GoogleMail.apk
 	 
 # Backup Tool
@@ -117,10 +116,6 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     WeatherProvider \
     DataUsageProvider
-
-# Exchange support
-PRODUCT_PACKAGES += \
-    Exchange2
 
 # Extra tools in OwnROM
 PRODUCT_PACKAGES += \
