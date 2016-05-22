@@ -37,7 +37,6 @@ endif
 # OwnROM Custom Packages
 PRODUCT_COPY_FILES += \
     vendor/ownrom/prebuilt/prebuilt-apps/KernelAdiutor/KernelAdiutor.apk:system/priv-app/KernelAdiutor/KernelAdiutor.apk \
-    vendor/ownrom/prebuilt/prebuilt-apps/ESFileExplorer/ESFileExplorer.apk:system/priv-app/ESFileExplorer/ESFileExplorer.apk \
     vendor/ownrom/prebuilt/prebuilt-apps/NovaLauncher/NovaLauncher.apk:system/priv-app/NovaLauncher/NovaLauncher.apk \
     vendor/ownrom/prebuilt/prebuilt-apps/GoogleMail/GoogleMail.apk:system/app/GoogleMail/GoogleMail.apk
 	 
