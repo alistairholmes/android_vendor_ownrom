@@ -14,3 +14,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.alarm_alert=Helium.ogg
 
 $(call inherit-product, vendor/ownrom/config/telephony.mk)
+
+ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
+    PRODUCT_COPY_FILES += \
+        vendor/ownrom/prebuilt/common/bootanimation/480.zip:system/media/bootanimation.zip
+endif
