@@ -66,7 +66,6 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/ownrom/prebuilt/prebuilt-apps/KernelAdiutor/KernelAdiutor.apk:system/priv-app/KernelAdiutor/KernelAdiutor.apk \
     vendor/ownrom/prebuilt/prebuilt-apps/NovaLauncher/NovaLauncher.apk:system/priv-app/NovaLauncher/NovaLauncher.apk \
-    vendor/ownrom/prebuilt/prebuilt-apps/GoogleMail/GoogleMail.apk:system/app/GoogleMail/GoogleMail.apk
 	 
 # Backup Tool
 PRODUCT_COPY_FILES += \
