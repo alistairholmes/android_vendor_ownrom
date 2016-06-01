@@ -69,7 +69,6 @@ PRODUCT_COPY_FILES += \
     vendor/ownrom/prebuilt/prebuilt-apps/GoogleMail/GoogleMail.apk:system/app/GoogleMail/GoogleMail.apk
 	 
 # Backup Tool
-ifneq ($(WITH_GMS),true)
 PRODUCT_COPY_FILES += \
     vendor/ownrom/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/ownrom/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
