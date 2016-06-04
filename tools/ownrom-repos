@@ -2,7 +2,9 @@ android
 build
 device/qcom/sepolicy
 external/sepolicy
+frameworks/av
 frameworks/base
 packages/apps/Settings
+packages/apps/OmniSwitch
 vendor/cmsdk
 vendor/ownrom
