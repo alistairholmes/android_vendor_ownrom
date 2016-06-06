@@ -140,6 +140,7 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     WeatherProvider \
     OmniSwitch \
+    OwnOTA \
     DataUsageProvider
 
 # Extra tools in OwnROM
