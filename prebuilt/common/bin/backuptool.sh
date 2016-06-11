@@ -5,7 +5,7 @@
 
 export C=/tmp/backupdir
 export S=/system
-export V=3.0
+export V=v3.0
 
 # Scripts in /system/addon.d expect to find backuptool.functions in /tmp
 cp -f /tmp/install/bin/backuptool.functions /tmp
@@ -33,7 +33,7 @@ check_prereq() {
 if [ ! -r /system/build.prop ]; then
     return 0
 fi
-if ( ! grep -q "^ro.own.version=$V.*" /system/build.prop ); then
+if ( ! grep -q "^ro.own.version=$V" /system/build.prop ); then
   echo "Not backing up files from incompatible version: $V"
   return 0
 fi
