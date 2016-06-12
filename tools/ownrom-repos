@@ -6,5 +6,6 @@ frameworks/av
 frameworks/base
 packages/apps/Settings
 packages/apps/OmniSwitch
+packages/apps/OwnOTA
 vendor/cmsdk
 vendor/ownrom
