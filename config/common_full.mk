@@ -4,6 +4,8 @@ $(call inherit-product, vendor/ownrom/config/common.mk)
 # Include OwnROM audio files
 include vendor/ownrom/config/ownrom_audio.mk
 
+PRODUCT_SIZE := full
+
 # Optional OwnROM packages
 PRODUCT_PACKAGES += \
     Galaxy4 \

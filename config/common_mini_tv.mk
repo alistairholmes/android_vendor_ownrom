@@ -1,5 +1,5 @@
 # Inherit common OwnROM stuff
-$(call inherit-product, vendor/ownrom/config/common.mk)
+$(call inherit-product, vendor/ownrom/config/common_mini.mk)
 
 # Include OwnROM audio files
 include vendor/ownrom/config/ownrom_audio.mk
