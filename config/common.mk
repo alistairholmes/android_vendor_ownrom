@@ -66,7 +66,8 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/ownrom/prebuilt/prebuilt-apps/KernelAdiutor/KernelAdiutor.apk:system/priv-app/KernelAdiutor/KernelAdiutor.apk \
     vendor/ownrom/prebuilt/prebuilt-apps/NovaLauncher/NovaLauncher.apk:system/priv-app/NovaLauncher/NovaLauncher.apk \
-	 
+    vendor/ownrom/prebuilt/prebuilt-apps/Adaway/Adaway.apk:system/priv-app/Adaway/Adaway.apk 
+ 
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/ownrom/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
