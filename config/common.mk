@@ -142,7 +142,9 @@ PRODUCT_PACKAGES += \
     WeatherProvider \
     OmniSwitch \
     OwnOTA \
-    DataUsageProvider
+    DataUsageProvider \
+    DataUsageProvider \
+    WallpaperPicker
 
 # Extra tools in OwnROM
 PRODUCT_PACKAGES += \
