@@ -134,7 +134,11 @@ PRODUCT_PACKAGES += \
     OwnStats \
     ThemeInterfacer \
     WallpaperPicker \
-    WeatherProvider
+    WeatherProvider \
+    org.dirtyunicorns.utils
+
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils
 
 # Exchange support
 PRODUCT_PACKAGES += \
