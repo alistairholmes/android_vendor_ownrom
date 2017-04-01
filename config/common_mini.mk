@@ -1,4 +1,4 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+# Inherit common OwnROM stuff
+$(call inherit-product, vendor/ownrom/config/common.mk)
 
 PRODUCT_SIZE := mini

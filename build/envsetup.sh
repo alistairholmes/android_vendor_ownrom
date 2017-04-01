@@ -43,7 +43,7 @@ function breakfast()
     CM_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     add_lunch_combo full-eng
-    for f in `/bin/ls vendor/cm/vendorsetup.sh 2> /dev/null`
+    for f in `/bin/ls vendor/ownrom/vendorsetup.sh 2> /dev/null`
         do
             echo "including $f"
             . $f
@@ -59,16 +59,16 @@ function breakfast()
             # A buildtype was specified, assume a full device name
             lunch $target
         else
-            # This is probably just the Lineage model name
+            # This is probably just the OwnROM model name
             if [ -z "$variant" ]; then
                 variant="userdebug"
             fi
 
-            if ! check_product lineage_$target && check_product cm_$target; then
+            if ! check_product ownrom_$target && check_product cm_$target; then
                 echo "** Warning: '$target' is using CM-based makefiles. This will be deprecated in the next major release."
                 lunch cm_$target-$variant
             else
-                lunch lineage_$target-$variant
+                lunch ownrom_$target-$variant
             fi
         fi
     fi
@@ -80,8 +80,8 @@ alias bib=breakfast
 function eat()
 {
     if [ "$OUT" ] ; then
-        MODVERSION=$(get_build_var LINEAGE_VERSION)
-        ZIPFILE=lineage-$MODVERSION.zip
+        MODVERSION=$(get_build_var OWNROM_VERSION)
+        ZIPFILE=$MODVERSION.zip
         ZIPPATH=$OUT/$ZIPFILE
         if [ ! -f $ZIPPATH ] ; then
             echo "Nothing to eat"
@@ -319,7 +319,7 @@ function installboot()
     sleep 1
     adb wait-for-online shell mount /system 2>&1 > /dev/null
     adb wait-for-online remount
-    if (adb shell getprop ro.cm.device | grep -q "$CM_BUILD");
+    if (adb shell getprop ro.cm.device | grep -q "$OWNROM_BUILD");
     then
         adb push $OUT/boot.img /cache/
         for i in $OUT/system/lib/modules/*;
@@ -330,7 +330,7 @@ function installboot()
         adb shell chmod 644 /system/lib/modules/*
         echo "Installation complete."
     else
-        echo "The connected device does not appear to be $CM_BUILD, run away!"
+        echo "The connected device does not appear to be $OWNROM_BUILD, run away!"
     fi
 }
 
@@ -364,13 +364,13 @@ function installrecovery()
     sleep 1
     adb wait-for-online shell mount /system 2>&1 >> /dev/null
     adb wait-for-online remount
-    if (adb shell getprop ro.cm.device | grep -q "$CM_BUILD");
+    if (adb shell getprop ro.ownrom.device | grep -q "$OWNROM_BUILD");
     then
         adb push $OUT/recovery.img /cache/
         adb shell dd if=/cache/recovery.img of=$PARTITION
         echo "Installation complete."
     else
-        echo "The connected device does not appear to be $CM_BUILD, run away!"
+        echo "The connected device does not appear to be $OWNROM_BUILD, run away!"
     fi
 }
 
@@ -390,8 +390,8 @@ function makerecipe() {
     if [ "$REPO_REMOTE" = "github" ]
     then
         pwd
-        cmremote
-        git push cmremote HEAD:refs/heads/'$1'
+        ownremote
+        git push ownremote HEAD:refs/heads/'$1'
     fi
     '
 }
@@ -922,7 +922,7 @@ alias cmkap='dopush cmka'
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/cm/build/tools/repopick.py $@
+    $T/vendor/ownrom/build/tools/repopick.py $@
 }
 
 function fixup_common_out_dir() {

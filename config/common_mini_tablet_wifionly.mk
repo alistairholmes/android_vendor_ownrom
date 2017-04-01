@@ -1,6 +1,6 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common_mini.mk)
+# Inherit common OwnROM stuff
+$(call inherit-product, vendor/ownrom/config/common_mini.mk)
 
-# Required CM packages
+# Required OwnROM packages
 PRODUCT_PACKAGES += \
     LatinIME
