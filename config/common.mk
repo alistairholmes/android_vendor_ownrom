@@ -60,10 +60,6 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
-# Copy over the changelog to the device
-PRODUCT_COPY_FILES += \
-    vendor/ownrom/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
-
 # Custom Prebuilt OwnROM Packages
 PRODUCT_COPY_FILES += \
 vendor/ownrom/prebuilt/apps/Amaze.apk:system/priv-app/Amaze/Amaze.apk
