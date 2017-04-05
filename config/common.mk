@@ -191,6 +191,14 @@ PRODUCT_PACKAGES += \
     wget \
     zip
 
+# Magisk Manager
+PRODUCT_PACKAGES += \
+    MagiskManager
+
+# Copy Magisk zip
+PRODUCT_COPY_FILES += \
+    vendor/ownrom/prebuilt/zips/magisk.zip:system/addon.d/magisk.zip
+    
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
 PRODUCT_PACKAGES += \

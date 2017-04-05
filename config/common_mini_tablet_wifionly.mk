@@ -9,4 +9,9 @@ PRODUCT_PACKAGES += \
 ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
      PRODUCT_COPY_FILES += \
          vendor/ownrom/bootanimation/800.zip:system/media/bootanimation.zip
+
+# Copy Magisk zip
+PRODUCT_COPY_FILES += \
+    vendor/ownrom/prebuilt/zips/magisk.zip:system/addon.d/magisk.zip
+
 endif
