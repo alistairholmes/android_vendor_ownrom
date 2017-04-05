@@ -64,6 +64,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/ownrom/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
 
+# Custom Prebuilt OwnROM Packages
+PRODUCT_COPY_FILES += \
+vendor/ownrom/prebuilt/apps/Amaze.apk:system/priv-app/Amaze/Amaze.apk
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/ownrom/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
