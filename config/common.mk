@@ -260,14 +260,16 @@ OWNROM_BUILDTYPE ?= UNOFFICIAL
  OWN_VERSION := 4.0
 OWNROM_VERSION := $(OWNROM_BUILDTYPE)-v$(OWN_VERSION)-$(OWNROM_BUILD)-$(shell date +%Y%m%d)
 
+OWNROM_DISPLAY_VERSION := $(OWNROM_BUILDTYPE)-$(OWN_VERSION)-$(shell date +%Y%m%d)
+
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.own.version=$(OWN_VERSION) \
     ro.ownrom.version=$(OWNROM_VERSION) \
     ro.ownrom.releasetype=$(OWNROM_BUILDTYPE) \
-    ro.modversion=$(OWNROM_VERSION) 
+    ro.modversion=$(OWNROM_VERSION) \
+    ro.ownrom.display.version=$(OWNROM_DISPLAY_VERSION) \
     ro.cmlegal.url=https://lineageos.org/legal
 
-OWNROM_DISPLAY_VERSION := $(OWNROM_BUILDTYPE)-$(OWN_VERSION)-$(shell date +%Y%m%d)
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/ownrom/build/target/product/security/lineage
