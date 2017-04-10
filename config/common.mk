@@ -47,7 +47,7 @@ PRODUCT_COPY_FILES += \
     vendor/ownrom/prebuilt/common/bin/50-cm.sh:system/addon.d/50-cm.sh \
     vendor/ownrom/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
-# Backup Services whitelist
+# System feature whitelists
 PRODUCT_COPY_FILES += \
     vendor/ownrom/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
