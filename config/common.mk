@@ -253,7 +253,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ownrom.releasetype=$(OWNROM_BUILDTYPE) \
     ro.modversion=$(OWNROM_VERSION) \
     ro.ownrom.display.version=$(OWNROM_DISPLAY_VERSION) \
-    ro.cmlegal.url=https://lineageos.org/legal
+    ro.cmlegal.url=https://lineageos.org/legal \
+    ro.lineageoms.version=$(OWNROM_DISPLAY_VERSION)
+
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/ownrom/build/target/product/security/lineage
