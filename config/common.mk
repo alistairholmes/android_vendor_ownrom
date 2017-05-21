@@ -244,8 +244,8 @@ DEVICE_PACKAGE_OVERLAYS += vendor/ownrom/overlay/common
 OWNROM_BUILDTYPE ?= UNOFFICIAL
  OWN_VERSION := 4.0
 OWNROM_VERSION := $(OWNROM_BUILDTYPE)-v$(OWN_VERSION)-$(OWNROM_BUILD)-$(shell date +%Y%m%d)
-
 OWNROM_DISPLAY_VERSION := $(OWNROM_BUILDTYPE)-$(OWN_VERSION)-$(shell date +%Y%m%d)
+OWNROM_UPDATER_VERSION := OwnROM-$(OWNROM_BUILDTYPE)-v$(OWN_VERSION)-$(OWNROM_BUILD)-$(shell date +%Y%m%d)
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.own.version=$(OWN_VERSION) \
@@ -253,6 +253,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ownrom.releasetype=$(OWNROM_BUILDTYPE) \
     ro.modversion=$(OWNROM_VERSION) \
     ro.ownrom.display.version=$(OWNROM_DISPLAY_VERSION) \
+    ro.ownrom.updater.version=$(OWNROM_UPDATER_VERSION) \
     ro.cmlegal.url=https://lineageos.org/legal \
     ro.lineageoms.version=$(OWNROM_DISPLAY_VERSION)
 
