@@ -38,6 +38,7 @@ endif
 # Custom Prebuilt OwnROM Packages
 PRODUCT_COPY_FILES += \
 vendor/ownrom/prebuilt/apps/Amaze.apk:system/priv-app/Amaze/Amaze.apk
+vendor/ownrom/prebuilt/apps/Nova.apk:system/priv-app/Nova/Nova.apk
 vendor/ownrom/prebuilt/apps/Substratum.apk:sytem/priv-app/Substratum/Substratum.apk
 
 # Backup Tool
@@ -130,7 +131,6 @@ PRODUCT_PACKAGES += \
     LockClock \
     OwnOTA \
     ThemeInterfacer \
-    Trebuchet \
     WallpaperPicker \
     WeatherProvider
 
