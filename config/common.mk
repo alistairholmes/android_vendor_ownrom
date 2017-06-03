@@ -40,7 +40,8 @@ PRODUCT_COPY_FILES += \
 vendor/ownrom/prebuilt/apps/Amaze.apk:system/priv-app/Amaze/Amaze.apk \
 vendor/ownrom/prebuilt/apps/Nova.apk:system/priv-app/Nova/Nova.apk \
 vendor/ownrom/prebuilt/apps/Substratum.apk:system/priv-app/Substratum/Substratum.apk \
-vendor/ownrom/prebuilt/apps/GBoard.apk:system/app/GBoard/GBoard.apk
+vendor/ownrom/prebuilt/apps/GBoard.apk:system/app/GBoard/GBoard.apk \
+vendor/ownrom/prebuilt/apps/RomStats.apk:system/app/RomStats/RomStats.apk
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -260,7 +261,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ownrom.updater.version=$(OWNROM_UPDATER_VERSION) \
     ro.ownrom.updater.device=$(OWNROM_UPDATER_DEVICE) \
     ro.cmlegal.url=https://lineageos.org/legal \
-    ro.lineageoms.version=$(OWNROM_DISPLAY_VERSION)
+    ro.lineageoms.version=$(OWNROM_DISPLAY_VERSION) \
+    ro.romstats.url=https://own-rom.sourceforge.io/romstats/ \
+    ro.romstats.name=OwnROM \
+    ro.romstats.version=$(OWN_VERSION)-$(OWNROM_BUILD) \
+    ro.romstats.tframe=7 
 
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
