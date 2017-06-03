@@ -41,7 +41,6 @@ vendor/ownrom/prebuilt/apps/Amaze.apk:system/priv-app/Amaze/Amaze.apk \
 vendor/ownrom/prebuilt/apps/Nova.apk:system/priv-app/Nova/Nova.apk \
 vendor/ownrom/prebuilt/apps/Substratum.apk:system/priv-app/Substratum/Substratum.apk \
 vendor/ownrom/prebuilt/apps/GBoard.apk:system/app/GBoard/GBoard.apk \
-vendor/ownrom/prebuilt/apps/RomStats.apk:system/app/RomStats/RomStats.apk
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -132,6 +131,7 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     LockClock \
     OwnOTA \
+    OwnStats \
     ThemeInterfacer \
     WallpaperPicker \
     WeatherProvider
