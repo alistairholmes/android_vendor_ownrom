@@ -269,7 +269,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.romstats.url=https://own-rom.sourceforge.io/romstats/ \
     ro.romstats.name=OwnROM \
     ro.romstats.version=$(OWN_VERSION)-$(OWNROM_BUILD) \
-    ro.romstats.tframe=7 
+    ro.romstats.tframe=7 \
+    ro.opa.eligible_device=true
 
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
