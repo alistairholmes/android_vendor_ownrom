@@ -130,6 +130,7 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LiveLockScreenService \
     LockClock \
+    OmniSwitch \
     OwnOTA \
     OwnStats \
     ThemeInterfacer \
