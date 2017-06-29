@@ -1,8 +1,21 @@
 PRODUCT_BRAND ?= OwnROM
 
 # Bootanimation
+TARGET_BOOTANIMATION_720P := $(shell \
+   if [ $(TARGET_SCREEN_WIDTH) -le 720 ]; then \
+      echo 'true'; \
+   else \
+      echo ''; \
+   fi )
+
+ifeq ($(TARGET_BOOTANIMATION_720P), true)
 PRODUCT_COPY_FILES += \
-vendor/ownrom/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+    vendor/ownrom/bootanimation/720.zip:system/media/bootanimation.zip
+else
+PRODUCT_COPY_FILES += \
+    vendor/ownrom/bootanimation/1080.zip:system/media/bootanimation.zip
+endif
+######
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
