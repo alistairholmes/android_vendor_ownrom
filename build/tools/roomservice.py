@@ -179,6 +179,8 @@ def create_manifest_remove(url):
 
 
 def append_to_manifest(project):
+
+    # Search in main manifest, too
     try:
         lm = ES.parse('/'.join([local_manifest_dir, "roomservice.xml"]))
         lm = lm.getroot()
